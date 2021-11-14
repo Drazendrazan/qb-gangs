@@ -27,7 +27,7 @@ end)
 **after you need to update you qb-core with gangs but no grades**
 
 #server/commands.lua
-
+```
 QBCore.Commands.Add('gang', 'Check Your Gang', {}, false, function(source)
     local src = source
     local PlayerGang = QBCore.Functions.GetPlayer(source).PlayerData.gang
@@ -43,8 +43,9 @@ QBCore.Commands.Add('setgang', 'Set A Players Gang (Admin Only)', { { name = 'id
         TriggerClientEvent('QBCore:Notify', src, 'Player Not Online', 'error')
     end
 end, 'admin')
+```
 
-#server/playerlua replace this
+## server/playerlua replace this
 ```
 PlayerData.gang = PlayerData.gang or {}
 PlayerData.gang.name = PlayerData.gang.name or 'none'
@@ -61,7 +62,7 @@ PlayerData.gang.name = PlayerData.gang.name ~= nil and PlayerData.gang.name or "
 PlayerData.gang.label = PlayerData.gang.label ~= nil and PlayerData.gang.label or "Geen Gang"
 ```
 
-**and**
+**and replace this**
 
 ```
                 self.PlayerData.job.grade = {}
