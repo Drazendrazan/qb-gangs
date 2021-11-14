@@ -1,3 +1,5 @@
+
+
 fx_version 'cerulean'
 game 'gta5'
 
@@ -35,3 +37,4 @@ files {
 } 
 
 ui_page 'html/index.html'
+shared_script '@qb-core/import.lua'
