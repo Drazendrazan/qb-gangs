@@ -1,6 +1,3 @@
-QBCore = nil
-TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
-
 QBCore.Functions.CreateCallback("qb-gangs:server:FetchConfig", function(source, cb)
     cb(json.decode(LoadResourceFile(GetCurrentResourceName(), "config.json")))
 end)
