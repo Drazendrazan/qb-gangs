@@ -1,12 +1,6 @@
-QBCore = nil
 Config = {}
 
 CreateThread(function()
-    while QBCore == nil do
-        TriggerEvent("QBCore:GetObject", function(obj) QBCore = obj end)
-        Wait(100) 
-    end
-
     QBCore.Functions.TriggerCallback("qb-gangs:server:FetchConfig", function(gangs)
         Config.Gangs = gangs
     end)
